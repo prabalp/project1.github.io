@@ -7,6 +7,9 @@ const app = express();
 app.use(cors());
 app.use(express.static('public'));
 
+
+// use console to debug the storage and upload 
+
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'public')
